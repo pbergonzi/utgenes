@@ -1,8 +1,8 @@
-package main.java.ar.edu.utn.frba.ia.ag.ejemplos.monedas;
+package ar.edu.utn.frba.ia.ag.ejemplos.monedas;
 
-import main.java.ar.edu.utn.frba.ia.ag.AlgoritmoGenetico;
-import main.java.ar.edu.utn.frba.ia.ag.ConfiguracionDefault;
-import main.java.ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.AlgoritmoGenetico;
+import ar.edu.utn.frba.ia.ag.ConfiguracionDefault;
+import ar.edu.utn.frba.ia.ag.Individuo;
 
 public class ejemploMonedas {
 	

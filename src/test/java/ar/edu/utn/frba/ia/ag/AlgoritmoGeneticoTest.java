@@ -1,12 +1,12 @@
-package test.java.ar.edu.utn.frba.ia.ag;
+package ar.edu.utn.frba.ia.ag;
 
 import junit.framework.TestCase;
-import main.java.ar.edu.utn.frba.ia.ag.AlgoritmoGenetico;
-import main.java.ar.edu.utn.frba.ia.ag.Configuracion;
-import main.java.ar.edu.utn.frba.ia.ag.ConfiguracionDefault;
-import main.java.ar.edu.utn.frba.ia.ag.Individuo;
-import main.java.ar.edu.utn.frba.ia.ag.paro.CantidadDeCiclos;
-import main.java.ar.edu.utn.frba.ia.ag.paro.CriterioDeParo;
+import ar.edu.utn.frba.ia.ag.AlgoritmoGenetico;
+import ar.edu.utn.frba.ia.ag.Configuracion;
+import ar.edu.utn.frba.ia.ag.ConfiguracionDefault;
+import ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.paro.CantidadDeCiclos;
+import ar.edu.utn.frba.ia.ag.paro.CriterioDeParo;
 
 public class AlgoritmoGeneticoTest extends TestCase {
 	

@@ -1,12 +1,12 @@
-package main.java.ar.edu.utn.frba.ia.ag;
+package ar.edu.utn.frba.ia.ag;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import main.java.ar.edu.utn.frba.ia.ag.cruzamiento.Cruzamiento;
-import main.java.ar.edu.utn.frba.ia.ag.mutacion.Mutacion;
-import main.java.ar.edu.utn.frba.ia.ag.paro.CriterioDeParo;
-import main.java.ar.edu.utn.frba.ia.ag.seleccion.Seleccion;
+import ar.edu.utn.frba.ia.ag.cruzamiento.Cruzamiento;
+import ar.edu.utn.frba.ia.ag.mutacion.Mutacion;
+import ar.edu.utn.frba.ia.ag.paro.CriterioDeParo;
+import ar.edu.utn.frba.ia.ag.seleccion.Seleccion;
 
 public abstract class Configuracion {
 	

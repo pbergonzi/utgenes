@@ -1,6 +1,6 @@
-package main.java.ar.edu.utn.frba.ia.ag.ejemplos.optimizacion;
+package ar.edu.utn.frba.ia.ag.ejemplos.optimizacion;
 
-import main.java.ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.Individuo;
 
 public class Combinaciones extends Individuo {
 	

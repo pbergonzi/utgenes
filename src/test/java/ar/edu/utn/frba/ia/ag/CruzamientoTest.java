@@ -1,12 +1,12 @@
-package test.java.ar.edu.utn.frba.ia.ag;
+package ar.edu.utn.frba.ia.ag;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import junit.framework.TestCase;
-import main.java.ar.edu.utn.frba.ia.ag.Individuo;
-import main.java.ar.edu.utn.frba.ia.ag.cruzamiento.BinomialMascaraComplemento;
-import main.java.ar.edu.utn.frba.ia.ag.cruzamiento.Cruzamiento;
+import ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.cruzamiento.BinomialMascaraComplemento;
+import ar.edu.utn.frba.ia.ag.cruzamiento.Cruzamiento;
 
 import org.junit.Test;
 

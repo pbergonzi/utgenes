@@ -1,14 +1,14 @@
-package test.java.ar.edu.utn.frba.ia.ag;
+package ar.edu.utn.frba.ia.ag;
 
 import junit.framework.TestCase;
-import main.java.ar.edu.utn.frba.ia.ag.Configuracion;
-import main.java.ar.edu.utn.frba.ia.ag.Configuracion5Min;
-import main.java.ar.edu.utn.frba.ia.ag.ConfiguracionDefault;
-import main.java.ar.edu.utn.frba.ia.ag.cruzamiento.Simple;
-import main.java.ar.edu.utn.frba.ia.ag.mutacion.MutacionSimple;
-import main.java.ar.edu.utn.frba.ia.ag.paro.CantidadDeCiclos;
-import main.java.ar.edu.utn.frba.ia.ag.paro.TiempoTranscurrido;
-import main.java.ar.edu.utn.frba.ia.ag.seleccion.Torneo;
+import ar.edu.utn.frba.ia.ag.Configuracion;
+import ar.edu.utn.frba.ia.ag.Configuracion5Min;
+import ar.edu.utn.frba.ia.ag.ConfiguracionDefault;
+import ar.edu.utn.frba.ia.ag.cruzamiento.Simple;
+import ar.edu.utn.frba.ia.ag.mutacion.MutacionSimple;
+import ar.edu.utn.frba.ia.ag.paro.CantidadDeCiclos;
+import ar.edu.utn.frba.ia.ag.paro.TiempoTranscurrido;
+import ar.edu.utn.frba.ia.ag.seleccion.Torneo;
 
 import org.junit.Test;
 

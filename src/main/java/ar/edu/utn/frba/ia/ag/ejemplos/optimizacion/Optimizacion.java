@@ -1,12 +1,12 @@
-package main.java.ar.edu.utn.frba.ia.ag.ejemplos.optimizacion;
+package ar.edu.utn.frba.ia.ag.ejemplos.optimizacion;
 
 import java.util.logging.Logger;
 
-import main.java.ar.edu.utn.frba.ia.ag.AlgoritmoGenetico;
-import main.java.ar.edu.utn.frba.ia.ag.Configuracion;
-import main.java.ar.edu.utn.frba.ia.ag.ConfiguracionDefault;
-import main.java.ar.edu.utn.frba.ia.ag.Individuo;
-import main.java.ar.edu.utn.frba.ia.ag.seleccion.ControlSobreNumeroEsperado;
+import ar.edu.utn.frba.ia.ag.AlgoritmoGenetico;
+import ar.edu.utn.frba.ia.ag.Configuracion;
+import ar.edu.utn.frba.ia.ag.ConfiguracionDefault;
+import ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.seleccion.ControlSobreNumeroEsperado;
 
 public class Optimizacion {
 	

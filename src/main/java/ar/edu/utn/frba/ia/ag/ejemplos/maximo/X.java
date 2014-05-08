@@ -1,6 +1,6 @@
-package main.java.ar.edu.utn.frba.ia.ag.ejemplos.maximo;
+package ar.edu.utn.frba.ia.ag.ejemplos.maximo;
 
-import main.java.ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.Individuo;
 
 public class X extends Individuo {
 	

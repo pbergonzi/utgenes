@@ -1,6 +1,6 @@
-package test.java.ar.edu.utn.frba.ia.ag;
+package ar.edu.utn.frba.ia.ag;
 
-import main.java.ar.edu.utn.frba.ia.ag.Estado;
+import ar.edu.utn.frba.ia.ag.Estado;
 
 public class EstadoDePrueba extends Estado {
 	

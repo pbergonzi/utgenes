@@ -1,8 +1,8 @@
-package main.java.ar.edu.utn.frba.ia.ag.ejemplos.monedas;
+package ar.edu.utn.frba.ia.ag.ejemplos.monedas;
 
 import java.util.logging.Logger;
 
-import main.java.ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.Individuo;
 
 public class Monedero extends Individuo {
 	

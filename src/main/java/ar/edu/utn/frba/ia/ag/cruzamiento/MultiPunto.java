@@ -1,8 +1,8 @@
-package main.java.ar.edu.utn.frba.ia.ag.cruzamiento;
+package ar.edu.utn.frba.ia.ag.cruzamiento;
 
 import java.util.List;
 
-import main.java.ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.Individuo;
 
 public class MultiPunto extends Cruzamiento {
 	

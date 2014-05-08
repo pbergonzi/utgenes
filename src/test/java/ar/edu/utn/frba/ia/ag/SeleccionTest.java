@@ -1,14 +1,14 @@
-package test.java.ar.edu.utn.frba.ia.ag;
+package ar.edu.utn.frba.ia.ag;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import junit.framework.TestCase;
-import main.java.ar.edu.utn.frba.ia.ag.Estado;
-import main.java.ar.edu.utn.frba.ia.ag.Individuo;
-import main.java.ar.edu.utn.frba.ia.ag.seleccion.Ranking;
-import main.java.ar.edu.utn.frba.ia.ag.seleccion.Seleccion;
-import main.java.ar.edu.utn.frba.ia.ag.seleccion.Torneo;
+import ar.edu.utn.frba.ia.ag.Estado;
+import ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.seleccion.Ranking;
+import ar.edu.utn.frba.ia.ag.seleccion.Seleccion;
+import ar.edu.utn.frba.ia.ag.seleccion.Torneo;
 
 import org.junit.Test;
 

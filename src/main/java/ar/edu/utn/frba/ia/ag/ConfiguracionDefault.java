@@ -1,9 +1,9 @@
-package main.java.ar.edu.utn.frba.ia.ag;
+package ar.edu.utn.frba.ia.ag;
 
-import main.java.ar.edu.utn.frba.ia.ag.cruzamiento.Simple;
-import main.java.ar.edu.utn.frba.ia.ag.mutacion.MutacionSimple;
-import main.java.ar.edu.utn.frba.ia.ag.paro.CantidadDeCiclos;
-import main.java.ar.edu.utn.frba.ia.ag.seleccion.Torneo;
+import ar.edu.utn.frba.ia.ag.cruzamiento.Simple;
+import ar.edu.utn.frba.ia.ag.mutacion.MutacionSimple;
+import ar.edu.utn.frba.ia.ag.paro.CantidadDeCiclos;
+import ar.edu.utn.frba.ia.ag.seleccion.Torneo;
 
 public class ConfiguracionDefault extends Configuracion {
 	

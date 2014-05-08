@@ -1,6 +1,6 @@
-package test.java.ar.edu.utn.frba.ia.ag.testEjemplo;
+package ar.edu.utn.frba.ia.ag.testEjemplo;
 
-import main.java.ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.Individuo;
 
 public class IndividuoDePrueba extends Individuo {
 	

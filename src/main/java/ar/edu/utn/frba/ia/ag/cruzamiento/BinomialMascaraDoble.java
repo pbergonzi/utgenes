@@ -1,11 +1,11 @@
-package main.java.ar.edu.utn.frba.ia.ag.cruzamiento;
+package ar.edu.utn.frba.ia.ag.cruzamiento;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.logging.Logger;
 
-import main.java.ar.edu.utn.frba.ia.ag.Individuo;
-import main.java.ar.edu.utn.frba.ia.ag.UTgeNesUtils;
+import ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.UTgeNesUtils;
 
 public class BinomialMascaraDoble extends Cruzamiento {
 	
