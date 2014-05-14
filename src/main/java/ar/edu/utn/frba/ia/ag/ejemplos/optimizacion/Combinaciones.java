@@ -18,6 +18,22 @@ public class Combinaciones extends Individuo {
 	 * 
 	 * */
 	
+	public double aptitud() {
+		
+		if (h < 0
+				|| s < 0
+				|| u < 0
+				|| 3*h + 2*s + 1.5*u > 500
+				|| 2*h + 2.5*s + 1.5*u > 390
+				|| 0.5*h + s + 0.5*u > 215
+				|| 2*h + 0.5*s + u > 145) {
+			return 0;
+		}
+		
+		return 15 * h + 13 * s + 11 * u;
+		
+	}
+	
 	private Double h;
 	private Double s;
 	private Double u;
@@ -44,22 +60,6 @@ public class Combinaciones extends Individuo {
 
 	public void setU(Double u) {
 		this.u = u;
-	}
-	
-	public double aptitud() {
-		
-		if (h < 0
-			|| s < 0
-			|| u < 0
-			|| 3*h + 2*s + 1.5*u > 500
-			|| 2*h + 2.5*s + 1.5*u > 390
-			|| 0.5*h + s + 0.5*u > 215
-			|| 2*h + 0.5*s + u > 145) {
-			return 0;
-		}
-		
-		return 15 * h + 13 * s + 11 * u;
-		
 	}
 	
 	@Override
