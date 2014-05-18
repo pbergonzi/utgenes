@@ -46,101 +46,111 @@ public class Mundiales extends Individuo{
 		double aptitud = 0;
 		
 		// 1- Dos mundiales tuvieron la misma cantidad de goles totales.
-		if (!hayDosMundialesConLaMismaCantidadDeGoles()){
-			aptitud += 5;
+		if ( hayDosMundialesConLaMismaCantidadDeGoles() ){
+			aptitud += 10;
 		}
 		// 2- El mundial de 1974 fue en el que se anotaron menos goles
-		if (!enElDe1974SeAnotaronMenosGoles()){
+		if ( enElDe1974SeAnotaronMenosGoles() ){
 			aptitud += 10;
 		}
 		// 3- España y Francia salieron campeones solo una vez, el resto dos veces
-		if (!espanaYFranciaSalieronCampeonesUnaVezElRestoDos()){
-			aptitud += 70;
+		if ( espanaYFranciaSalieronCampeonesUnaVezElRestoDos() ){
+			aptitud += 20;
 		}
 		// 4- Tres veces salió campeón el mismo país que era sede
-		if (!tresVecesSalioCampeonElMismoPaisQueEraSede()){
-			aptitud += 40;
+		if ( tresVecesSalioCampeonElMismoPaisQueEraSede() ){
+			aptitud += 20;
 		}
 		// 5- Holanda fue 3 veces subcampeón pero nunca campeon
-		if (!holandaFue3VecesSubcampeonPeroNuncaCampeon()){
-			aptitud += 50;
+		if ( holandaFue3VecesSubcampeonPeroNuncaCampeon() ){
+			aptitud += 10;
 		}
 		// 6- Dos mundiales tuvieron 38 partidos, cuatro 52 y cuatro 64
-		if (!dosMundialesTuvieron38PartidosCuatro52YCuatro64()){
+		if ( dosMundialesTuvieron38PartidosCuatro52YCuatro64() ){
 			aptitud += 30;
 		} 
 		// 7- Alemania fue dos veces sede
-		if (!alemaniaFueDosVecesSede()){
+		if ( alemaniaFueDosVecesSede() ){
 			aptitud += 20;
 		}
 		// 8- La sede de 1974 fue Alemania
-		if (!alemaniaSalioCamperonEn1974()){
+		if ( alemaniaSalioCamperonEn1974() ){
 			aptitud += 20;
 		}
 		// 9- En Italia no fue campeón Argentina
-		if (!argentinaNoSalioCampeonEnItalia()){
-			aptitud += 70;
+		if ( argentinaNoSalioCampeonEnItalia() ){
+			aptitud += 40;
 		}
 		// 10- En Alemania nunca se jugaron 52 partidos
-		if (!enAlemaniaNuncaSeJugaron52Partidos()){
+		if ( enAlemaniaNuncaSeJugaron52Partidos() ){
 			aptitud += 10;
 		}
 		// 11- Brasil y Alemania fueron campeones luego de ser subcampeones
-		if (!brasilYAlemaniaSalieronCampeonesDespuesDeSerSubcampeones()){
-			aptitud += 40;
-		}
-		// 12- En tres mundiales fue goleador el mismo país campeón
-		if (!enTresMundialesFueGoleadorElMismoPaisCampeon()){
+		if ( brasilYAlemaniaSalieronCampeonesDespuesDeSerSubcampeones() ){
 			aptitud += 30;
 		}
-		// 13- El mundial ganado por Francia fue el que tuvo mas cantidad de goles
-		if (!elMundialGanadoPorFranciaFueElQueTuvoMasCantidadDeGoles()){
-			aptitud += 25;
-		}
-		// 14- El mundial con menos goles tuvo de goleador a Polonia
-		if (!elMundialConMenosGolesTuvoDeGoleadorAPolonia()){
-			aptitud += 5;
-		}
-		// 15- Argentina no salio campeon en los mundiales con 64 partidos
-		if (!argentinaNoSalioCampeonEnLosMundialesCon64Partidos()){
-			aptitud += 45;
-		}
-		// 16- Argentina y Brasil fueron subcampeones luego de ser campeones
-		if (!argentinaYBrasilFueronSubcampeonesLuegoDeSerCampeones()){
-			aptitud += 70;
-		}
-		// 17- Solamente en el mundial de 1978, tanto la sede, como el campeón, como el goleador son el o del mismo país.
-		if (!soloEn1978LaSedeElGoleadorYElCampeonSonElMismoPais()){
-			aptitud += 90;
-		}
-		// 18- Nunca un mundial tuvo menos partidos que el anterior
-		if (!nuncaUnMundialTuvoMenosPartidosQueElAnterior()){
-			aptitud += 60;
-		}
-		// 19- Un equipo subcampeón nunca tuvo a un jugador de su selección como goleador
-		if (!unSubcampeonNuncaTuvoUnGoleadorEnElMismoMundial()){
+		// 12- En tres mundiales fue goleador el mismo país campeón
+		if ( enTresMundialesFueGoleadorElMismoPaisCampeon() ){
 			aptitud += 40;
 		}
-		// 20- Solo existe un goleador uruguayo.
-		if (!uruguayTuvoUnSoloGoleador()){
+		// 13- El mundial ganado por Francia fue el que tuvo mas cantidad de goles
+		if ( elMundialGanadoPorFranciaFueElQueTuvoMasCantidadDeGoles() ){
+			aptitud += 20;
+		}
+		// 14- El mundial con menos goles tuvo de goleador a Polonia
+		if ( elMundialConMenosGolesTuvoDeGoleadorAPolonia() ){
+			aptitud += 10;
+		}
+		// 15- Argentina no salio campeon en los mundiales con 64 partidos
+		if ( argentinaNoSalioCampeonEnLosMundialesCon64Partidos() ){
+			aptitud += 30;
+		}
+		// 16- Argentina y Brasil fueron subcampeones luego de ser campeones
+		if ( argentinaYBrasilFueronSubcampeonesLuegoDeSerCampeones() ){
+			aptitud += 40;
+		}
+		// 17- Solamente en el mundial de 1978, tanto la sede, como el campeón, como el goleador son el o del mismo país.
+		if ( soloEn1978LaSedeElGoleadorYElCampeonSonElMismoPais() ){
+			aptitud += 40;
+		}		
+		// 18- Un equipo subcampeón nunca tuvo a un jugador de su selección como goleador
+		if ( unSubcampeonNuncaTuvoUnGoleadorEnElMismoMundial() ){
+			aptitud += 40;
+		}
+		// 19- Solo existe un goleador uruguayo.
+		if ( uruguayTuvoUnSoloGoleador() ){
 			aptitud += 15;
 		}
-		// 21- Alemania jugó 5 finales
-		if (!alemaniaJugo5Finales()){
-			aptitud += 80;
+		// 20- Alemania jugó 5 finales
+		if ( alemaniaJugo5Finales() ){
+			aptitud += 50;
 		}
-		// 22- En México se convirtieron 132 goles en total
-		if (!enMexicoSeConvirtieron132GolesEnTotal()){
+		// 21- En México se convirtieron 132 goles en total
+		if ( enMexicoSeConvirtieron132GolesEnTotal() ){
 			aptitud += 5;
 		}
-		// 23- Holanda salió subcampeón dos veces seguidas.
-		if (!holandaSalioSubcampeonDosVecesSeguidas()){
+		// 22- Holanda salió subcampeón dos veces seguidas.
+		if ( holandaSalioSubcampeonDosVecesSeguidas() ){
 			aptitud += 45;
 		}
-		// 24- Alemania y Argentina disputaron dos finales, alternando campeonato y subcampeonato. Dichas finales son las de 1986 y 1990.
-		if (!alemaniaYArgentinaJugaronDosFinalesAlternandoCampeonatoYSubcampeonatoEn1986Y1990()){
+		// 23- Alemania y Argentina disputaron dos finales, alternando campeonato y subcampeonato. Dichas finales son las de 1986 y 1990.
+		if ( alemaniaYArgentinaJugaronDosFinalesAlternandoCampeonatoYSubcampeonatoEn1986Y1990() ){
 			aptitud += 80;
 		}
+		
+		
+		/*Restricciones*/
+		
+		// 1 - Todo mundial tuvo igual o más partidos que el anterior.
+		if ( !todoMundialTuvoIgualOMasPartidosQueElAnterior() ){
+			aptitud -= 100;
+		}
+		// 2 - En un mundial, un país no puede ser campeón y subcampeón.
+		if ( ! unPaisNoEsCampeonYSubcampeonEnUnMundial() ){
+			aptitud -= 100;
+		}
+		
+		this.setNumeroAptitud( (int) aptitud );
 		
 		return aptitud;
 	}
@@ -156,6 +166,9 @@ public class Mundiales extends Individuo{
 		return sb.toString();
 	}
 	
+	/*
+	//No creo que hace falta este metodo, puede ser??
+	*/
 	private boolean cumpleRestricciones() {
 		return
 		// 1- Dos mundiales tuvieron la misma cantidad de goles totales.
@@ -192,20 +205,24 @@ public class Mundiales extends Individuo{
 		argentinaYBrasilFueronSubcampeonesLuegoDeSerCampeones() &&
 		// 17- Solamente en el mundial de 1978, tanto la sede, como el campeón, como el goleador son el o del mismo país.
 		soloEn1978LaSedeElGoleadorYElCampeonSonElMismoPais() &&
-		// 18- Nunca un mundial tuvo menos partidos que el anterior
-		nuncaUnMundialTuvoMenosPartidosQueElAnterior() &&
-		// 19- Un equipo subcampeón nunca tuvo a un jugador de su selección como goleador
+		// 18- Un equipo subcampeón nunca tuvo a un jugador de su selección como goleador
 		unSubcampeonNuncaTuvoUnGoleadorEnElMismoMundial() &&
-		// 20- Solo existe un goleador uruguayo.
+		// 19- Solo existe un goleador uruguayo.
 		uruguayTuvoUnSoloGoleador() &&
-		// 21- Alemania jugó 5 finales
+		// 20- Alemania jugó 5 finales
 		alemaniaJugo5Finales() &&
-		// 22- En México se convirtieron 132 goles en total
+		// 21- En México se convirtieron 132 goles en total
 		enMexicoSeConvirtieron132GolesEnTotal() &&
-		// 23- Holanda salió subcampeón dos veces seguidas.
+		// 22- Holanda salió subcampeón dos veces seguidas.
 		holandaSalioSubcampeonDosVecesSeguidas() &&
-		// 24- Alemania y Argentina disputaron dos finales, alternando campeonato y subcampeonato. Dichas finales son las de 1986 y 1990.
+		// 23- Alemania y Argentina disputaron dos finales, alternando campeonato y subcampeonato. Dichas finales son las de 1986 y 1990.
 		alemaniaYArgentinaJugaronDosFinalesAlternandoCampeonatoYSubcampeonatoEn1986Y1990();
+		
+		
+		/*
+		 // 18- Nunca un mundial tuvo menos partidos que el anterior
+		todoMundialTuvoIgualOMasPartidosQueElAnterior() &&
+		 */
 	}
 
 	private boolean alemaniaYArgentinaJugaronDosFinalesAlternandoCampeonatoYSubcampeonatoEn1986Y1990() {
@@ -284,12 +301,23 @@ public class Mundiales extends Individuo{
 		return true;
 	}
 
-	private boolean nuncaUnMundialTuvoMenosPartidosQueElAnterior() {
+	private boolean todoMundialTuvoIgualOMasPartidosQueElAnterior() {
 		for (Mundial mundial : getMundiales()) {
 			for (Mundial mundial2 : getMundiales()) {
 				if ( mundial.getPartidos() < mundial2.getPartidos() && mundial.getAnio() > mundial2.getAnio() ){
 					return false;
 				}
+			}
+		}
+		return true;
+	}
+	
+
+	private boolean unPaisNoEsCampeonYSubcampeonEnUnMundial() {
+		
+		for (Mundial mundial : getMundiales()) {
+			if (mundial.getCampeon().equals( mundial.getSubcampeon() )){
+				return false;
 			}
 		}
 		return true;
