@@ -1,5 +1,7 @@
 package tp1c2014;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -15,14 +17,34 @@ public class Mundial {
 	
 	public Mundial(int anio) {
 		this.anio = anio;
-		this.sede = generarRandom(ConstantesMundiales.SEDES);
-		this.campeon = generarRandom(ConstantesMundiales.CAMPEONES);
-		this.subcampeon = generarRandom(ConstantesMundiales.SUBCAMPEONES);
-		this.goleador = generarRandom(ConstantesMundiales.GOLEADORES);
-		this.goles = generarRandom(ConstantesMundiales.GOLES);
-		this.partidos = generarRandom(ConstantesMundiales.PARTIDOS);
+		this.sede = generar(ConstantesMundiales.SEDES, ConstantesMundiales.SEDES_USADOS);
+		this.campeon = generar(ConstantesMundiales.CAMPEONES, ConstantesMundiales.CAMPEONES_USADOS);
+		this.subcampeon = generar(ConstantesMundiales.SUBCAMPEONES, ConstantesMundiales.SUBCAMPEONES_USADOS);
+		this.goleador = generar(ConstantesMundiales.GOLEADORES, ConstantesMundiales.GOLEADORES_USADOS);
+		this.goles = generar(ConstantesMundiales.GOLES, ConstantesMundiales.GOLES_USADOS);
+		this.partidos = generar(ConstantesMundiales.PARTIDOS, ConstantesMundiales.PARTIDOS_USADOS);
 	}
 
+	private <T> T generar(List<T> lista, List<T> usados) {
+		List<T> list = new ArrayList<T>(lista);
+		Collections.shuffle(list);
+		
+		if ( usados.size() == list.size() ){
+			usados.clear();
+		}
+		
+		boolean encontrado = false;
+		while (!encontrado){
+			T random = generarRandom(list);
+			if ( !usados.contains(random) ){
+				usados.add(random);
+				return random;
+			}
+		}
+		
+        return null;
+	}
+	
 	private <T> T generarRandom(List<T> lista) {
 		Random randomGenerator = new Random();
 		int index = randomGenerator.nextInt( lista.size() );
