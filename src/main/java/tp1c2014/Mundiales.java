@@ -44,17 +44,17 @@ public class Mundiales extends Individuo{
 				ConstantesMundiales.r2++;
 				aptitud += 87;
 			}
-			// 2- España y Francia salieron campeones solo una vez, el resto dos veces
+			// 2- Espana y Francia salieron campeones solo una vez, el resto dos veces
 			if ( espanaYFranciaSalieronCampeonesUnaVezElRestoDos() ){
 				ConstantesMundiales.r3++;
 				aptitud += 95;
 			}
-			// 3- Tres veces salió campeón el mismo país que era sede
+			// 3- Tres veces salio campeon el mismo pais que era sede
 			if ( tresVecesSalioCampeonElMismoPaisQueEraSede() ){
 				ConstantesMundiales.r4++;
 				aptitud += 95;
 			}
-			// 4- Holanda fue 3 veces subcampeón pero nunca campeon
+			// 4- Holanda fue 3 veces subcampeon pero nunca campeon
 			if ( holandaFue3VecesSubcampeonPeroNuncaCampeon() ){
 				ConstantesMundiales.r5++;
 				aptitud += 96;
@@ -74,7 +74,7 @@ public class Mundiales extends Individuo{
 				ConstantesMundiales.r9++;
 				aptitud += 100;
 			}
-			// 8- En tres mundiales fue goleador el mismo país campeón
+			// 8- En tres mundiales fue goleador el mismo pais campeon
 			if ( enTresMundialesFueGoleadorElMismoPaisCampeon() ){
 				ConstantesMundiales.r10++;
 				aptitud += 97;
@@ -95,17 +95,17 @@ public class Mundiales extends Individuo{
 				ConstantesMundiales.r14++;
 				aptitud += 100;
 			}
-			// 12- Solamente en el mundial de 1978, tanto la sede, como el campeón, como el goleador son el o del mismo país.
+			// 12- Solamente en el mundial de 1978, tanto la sede, como el campeon, como el goleador son el o del mismo pais.
 			if ( soloEn1978LaSedeElGoleadorYElCampeonSonElMismoPais() ){
 				ConstantesMundiales.r15++;
 				aptitud += 99;
 			}		
-			// 13- Alemania jugó 5 finales
+			// 13- Alemania jugo 5 finales
 			if ( alemaniaJugo5Finales() ){
 				ConstantesMundiales.r17++;
 				aptitud += 98;
 			}
-			// 14- Holanda salió subcampeón dos veces seguidas.
+			// 14- Holanda salio subcampeon dos veces seguidas.
 			if ( holandaSalioSubcampeonDosVecesSeguidas() ){
 				ConstantesMundiales.r18++;
 				aptitud += 96;
@@ -115,17 +115,17 @@ public class Mundiales extends Individuo{
 				ConstantesMundiales.r19++;
 				aptitud += 100;
 			}
-			// 16 - Todo mundial tuvo igual o más partidos que el anterior.
+			// 16 - Todo mundial tuvo igual o mas partidos que el anterior.
 			if ( todoMundialTuvoIgualOMasPartidosQueElAnterior() ){
 				ConstantesMundiales.r20++;
 				aptitud += 1;
 			}
-			// 17 - En un mundial, campeón y subcampeón son países diferentes.
+			// 17 - En un mundial, campeon y subcampeon son paises diferentes.
 			if ( unPaisNoEsCampeonYSubcampeonEnUnMundial() ){
 				ConstantesMundiales.r21++;
 				aptitud += 24;
 			}
-			// 18- En México se convirtieron 132 goles en total
+			// 18- En Mexico se convirtieron 132 goles en total
 			if ( enMexicoSeConvirtieron132GolesEnTotal() ){
 				ConstantesMundiales.r23++;
 				aptitud += 7;
@@ -135,7 +135,7 @@ public class Mundiales extends Individuo{
 				ConstantesMundiales.r25++;
 				aptitud += 11;
 			}
-			// 20- El goleador del mundial, forma parte de un equipo distinto al subcampeón
+			// 20- El goleador del mundial, forma parte de un equipo distinto al subcampeon
 			if ( unSubcampeonNuncaTuvoUnGoleadorEnElMismoMundial() ){
 				ConstantesMundiales.r22++;
 				aptitud += 46;
@@ -148,7 +148,7 @@ public class Mundiales extends Individuo{
 				aptitud -= 99;
 			}
 			
-			// 22- En Italia no fue campeón Argentina
+			// 22- En Italia no fue campeon Argentina
 			if ( !argentinaNoSalioCampeonEnItalia() ){
 				ConstantesMundiales.r8++;
 				aptitud -= 82;

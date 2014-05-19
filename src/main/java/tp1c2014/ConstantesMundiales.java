@@ -6,10 +6,10 @@ import java.util.List;
 
 public class ConstantesMundiales {
 	
-	static final String SUDAFRICA 		= "Sudáfrica  ";
-	static final String COREA_JAPON 	= "Corea-Japón";
+	static final String SUDAFRICA 		= "Sudafrica  ";
+	static final String COREA_JAPON 	= "Corea-Japon";
 	static final String ESTADOS_UNIDOS 	= "EEUU       ";
-	static final String ESPANA 			= "España     ";
+	static final String ESPANA 			= "Espana     ";
 	static final String HOLANDA 		= "Holanda    ";
 	static final String ITALIA 			= "Italia     ";
 	static final String ALEMANIA 		= "Alemania   ";

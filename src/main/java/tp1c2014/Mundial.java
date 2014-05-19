@@ -54,7 +54,7 @@ public class Mundial {
 	
 	@Override
 	public String toString() {
-		return "Año: " + anio + 
+		return "Ano: " + anio + 
 				" Sede: " + sede + 
 				" Campeon: " + campeon + 
 				" Subcampeon: " + subcampeon + 

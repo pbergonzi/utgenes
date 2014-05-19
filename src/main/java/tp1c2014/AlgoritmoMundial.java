@@ -1,16 +1,15 @@
 package tp1c2014;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
+
 import ar.edu.utn.frba.ia.ag.AlgoritmoGenetico;
 import ar.edu.utn.frba.ia.ag.Configuracion;
 import ar.edu.utn.frba.ia.ag.ConfiguracionDefault;
 import ar.edu.utn.frba.ia.ag.Individuo;
-
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class AlgoritmoMundial {
 

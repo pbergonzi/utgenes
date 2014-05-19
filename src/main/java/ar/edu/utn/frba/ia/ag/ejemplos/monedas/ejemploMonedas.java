@@ -1,10 +1,12 @@
 package ar.edu.utn.frba.ia.ag.ejemplos.monedas;
 
+import java.util.logging.Logger;
+
 import ar.edu.utn.frba.ia.ag.AlgoritmoGenetico;
 import ar.edu.utn.frba.ia.ag.ConfiguracionDefault;
 import ar.edu.utn.frba.ia.ag.Individuo;
 
-public class ejemploMonedas {
+public class EjemploMonedas {
 	
 	public static void main(String[] args) {
 		
@@ -12,7 +14,7 @@ public class ejemploMonedas {
 		
 		Individuo monedas = cambioMonedas.ejecutar();
 		
-		System.err.println("Individuo resultado final: " + monedas.aptitud());
+		Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).severe("Individuo final: " + monedas.toString());
 		
 	}
 	
