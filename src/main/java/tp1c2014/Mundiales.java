@@ -48,15 +48,15 @@ public class Mundiales extends Individuo{
 			}
 			// 3- España y Francia salieron campeones solo una vez, el resto dos veces
 			if ( espanaYFranciaSalieronCampeonesUnaVezElRestoDos() ){
-				aptitud += 20;
+				aptitud += 60;
 			}
 			// 4- Tres veces salió campeón el mismo país que era sede
 			if ( tresVecesSalioCampeonElMismoPaisQueEraSede() ){
-				aptitud += 20;
+				aptitud += 50;
 			}
 			// 5- Holanda fue 3 veces subcampeón pero nunca campeon
 			if ( holandaFue3VecesSubcampeonPeroNuncaCampeon() ){
-				aptitud += 10;
+				aptitud += 80;
 			}
 			// 6- Dos mundiales tuvieron 38 partidos, cuatro 52 y cuatro 64
 			if ( dosMundialesTuvieron38PartidosCuatro52YCuatro64() ){
@@ -64,27 +64,19 @@ public class Mundiales extends Individuo{
 			} 
 			// 7- Alemania fue dos veces sede
 			if ( alemaniaFueDosVecesSede() ){
-				aptitud += 20;
-			}
-			// 8- La sede de 1974 fue Alemania
-			if ( alemaniaSalioCamperonEn1974() ){
-				aptitud += 20;
+				aptitud += 40;
 			}
 			// 9- En Italia no fue campeón Argentina
 			if ( argentinaNoSalioCampeonEnItalia() ){
 				aptitud += 40;
 			}
-			// 10- En Alemania nunca se jugaron 52 partidos
-			if ( enAlemaniaNuncaSeJugaron52Partidos() ){
-				aptitud += 10;
-			}
 			// 11- Brasil y Alemania fueron campeones luego de ser subcampeones
 			if ( brasilYAlemaniaSalieronCampeonesDespuesDeSerSubcampeones() ){
-				aptitud += 30;
+				aptitud += 80;
 			}
 			// 12- En tres mundiales fue goleador el mismo país campeón
 			if ( enTresMundialesFueGoleadorElMismoPaisCampeon() ){
-				aptitud += 40;
+				aptitud += 20;
 			}
 			// 13- El mundial ganado por Francia fue el que tuvo mas cantidad de goles
 			if ( elMundialGanadoPorFranciaFueElQueTuvoMasCantidadDeGoles() ){
@@ -100,35 +92,27 @@ public class Mundiales extends Individuo{
 			}
 			// 16- Argentina y Brasil fueron subcampeones luego de ser campeones
 			if ( argentinaYBrasilFueronSubcampeonesLuegoDeSerCampeones() ){
-				aptitud += 40;
+				aptitud += 70;
 			}
 			// 17- Solamente en el mundial de 1978, tanto la sede, como el campeón, como el goleador son el o del mismo país.
 			if ( soloEn1978LaSedeElGoleadorYElCampeonSonElMismoPais() ){
-				aptitud += 40;
+				aptitud += 80;
 			}		
-			// 18- Un equipo subcampeón nunca tuvo a un jugador de su selección como goleador
-			if ( unSubcampeonNuncaTuvoUnGoleadorEnElMismoMundial() ){
-				aptitud += 40;
-			}
 			// 19- Solo existe un goleador uruguayo.
 			if ( uruguayTuvoUnSoloGoleador() ){
 				aptitud += 15;
 			}
 			// 20- Alemania jugó 5 finales
 			if ( alemaniaJugo5Finales() ){
-				aptitud += 50;
-			}
-			// 21- En México se convirtieron 132 goles en total
-			if ( enMexicoSeConvirtieron132GolesEnTotal() ){
-				aptitud += 10;
+				aptitud += 100;
 			}
 			// 22- Holanda salió subcampeón dos veces seguidas.
 			if ( holandaSalioSubcampeonDosVecesSeguidas() ){
-				aptitud += 45;
+				aptitud += 55;
 			}
 			// 23- Alemania y Argentina disputaron dos finales, alternando campeonato y subcampeonato. Dichas finales son las de 1986 y 1990.
 			if ( alemaniaYArgentinaJugaronDosFinalesAlternandoCampeonatoYSubcampeonatoEn1986Y1990() ){
-				aptitud += 80;
+				aptitud += 200;
 			}
 						
 			/*Restricciones*/
@@ -140,6 +124,22 @@ public class Mundiales extends Individuo{
 			// 2 - En un mundial, un país no puede ser campeón y subcampeón.
 			if ( ! unPaisNoEsCampeonYSubcampeonEnUnMundial() ){
 				aptitud -= 50;
+			}
+			// 18- Un equipo subcampeón nunca tuvo a un jugador de su selección como goleador
+			if ( !unSubcampeonNuncaTuvoUnGoleadorEnElMismoMundial() ){
+				aptitud -= 40;
+			}
+			// 21- En México se convirtieron 132 goles en total
+			if ( !enMexicoSeConvirtieron132GolesEnTotal() ){
+				aptitud -= 10;
+			}
+			// 10- En Alemania nunca se jugaron 52 partidos
+			if ( !enAlemaniaNuncaSeJugaron52Partidos() ){
+				aptitud -= 10;
+			}
+			// 8- La sede de 1974 fue Alemania
+			if ( !alemaniaFueSedeEn1974() ){
+				aptitud -= 20;
 			}
 			
 			this.setNumeroAptitud( aptitud );
@@ -399,10 +399,10 @@ public class Mundiales extends Individuo{
 		return true;
 	}
 
-	private boolean alemaniaSalioCamperonEn1974() {
+	private boolean alemaniaFueSedeEn1974() {
 		for (Mundial mundial : getMundiales()) {
 			if ( mundial.getAnio() == 1974 ){
-				return mundial.getCampeon().equals(ConstantesMundiales.ALEMANIA);
+				return mundial.getSede().equals(ConstantesMundiales.ALEMANIA);
 			}
 		}
 		return false;
