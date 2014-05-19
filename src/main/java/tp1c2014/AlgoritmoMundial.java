@@ -4,24 +4,31 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.lang3.StringUtils;
 
 import ar.edu.utn.frba.ia.ag.AlgoritmoGenetico;
 import ar.edu.utn.frba.ia.ag.Configuracion;
-import ar.edu.utn.frba.ia.ag.ConfiguracionDefault;
 import ar.edu.utn.frba.ia.ag.Individuo;
+import ar.edu.utn.frba.ia.ag.cruzamiento.BinomialAzarComplemento;
+import ar.edu.utn.frba.ia.ag.cruzamiento.Simple;
+import ar.edu.utn.frba.ia.ag.seleccion.Ruleta;
+import ar.edu.utn.frba.ia.ag.seleccion.Torneo;
 
 public class AlgoritmoMundial {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		List<Mundiales> ganadores = new ArrayList<Mundiales>();
 		double mejorAptitud = -1000;
 		Individuo mejor = null;
 		
-		for (int i = 0; i < 50; i++) {
 		
-			Configuracion config = new ConfiguracionDefault();
+		for (int i = 0; i < 50; i++) {
+			Configuracion config = getConfiguracion( args );
 			
 			AlgoritmoGenetico maximoLocal = new AlgoritmoGenetico(config, Mundiales.class);
 			
@@ -68,6 +75,18 @@ public class AlgoritmoMundial {
             
         } catch (IOException e) {}
 		
+	}
+
+	private static Configuracion getConfiguracion(String[] args) throws Exception {
+		Map<String, Configuracion> configs = new HashMap<String, Configuracion>();
+		configs.put("1", new ConfiguracionMundial( new Torneo(), new Simple() ) );
+		configs.put("2", new ConfiguracionMundial( new Ruleta(), new Simple() ) );
+		configs.put("3", new ConfiguracionMundial( new Torneo(), new BinomialAzarComplemento() ) );
+		
+		if ( args.length > 0 && StringUtils.isNotEmpty(args[0]) && configs.keySet().contains(args[0]) ){
+			return configs.get(args[0]);
+		}
+		throw new Exception("Parametro invalido");
 	}
 
 	private static void logRestricciones() throws IOException {

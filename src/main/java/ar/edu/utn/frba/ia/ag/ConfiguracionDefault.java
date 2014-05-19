@@ -10,10 +10,10 @@ public class ConfiguracionDefault extends Configuracion {
 	public ConfiguracionDefault() {
 		
 		super(new CantidadDeCiclos(99L), // criterio de paro
-				3000, // cantIndividuosIniciales
+				999, // cantIndividuosIniciales
 				new Torneo(), // seleccion
 				new Simple(), // cruzamiento
-				new MutacionSimple(0.1)); // mutacion
+				new MutacionSimple(0.2)); // mutacion
 	}
 
 // Criterio de Paro
