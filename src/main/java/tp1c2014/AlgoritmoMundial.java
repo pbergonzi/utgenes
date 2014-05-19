@@ -50,7 +50,7 @@ public class AlgoritmoMundial {
 	        outFA.write("*********** VALORES DE APTITUD DE GANADORES **************");
 	        outFA.newLine();
 	        
-	        int index = 0;
+	        int index = 1;
 	        for (Mundiales individuo : ganadores) {
 	        	
 	        	outFA.write( individuo.getNumeroAptitud().toString()  );
@@ -60,6 +60,8 @@ public class AlgoritmoMundial {
 	        	outG.write( "Aptitud:" + individuo.getNumeroAptitud() );
 	        	outG.write( individuo.toString() );        	
 	        	outG.write("----------------------------------------------------------");
+	        	outG.newLine();
+	        	index++;
 	        }       
 
             outG.close();
