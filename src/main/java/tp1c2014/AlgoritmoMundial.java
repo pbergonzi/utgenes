@@ -18,7 +18,7 @@ public class AlgoritmoMundial {
 		
 		List<Mundiales> ganadores = new ArrayList<Mundiales>();
 		
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 50; i++) {
 		
 			Configuracion config = new ConfiguracionDefault();
 			
@@ -26,37 +26,32 @@ public class AlgoritmoMundial {
 			
 			Mundiales xyz = (Mundiales) maximoLocal.ejecutar();
 			
-			//Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).severe("Individuo final poblacion " + i+1 + ", Aptitud " + xyz.aptitud() + ": " + xyz.toString());
-			/*
-			try {
-		        BufferedWriter outLogger = new BufferedWriter(new FileWriter("logger.txt"));
-		        outLogger.write("----------------------------------------------------------");
-		        outLogger.newLine();
-		        outLogger.write("Individuo final poblacion " + i+1 + ", Aptitud " + xyz.aptitud() + ": " + xyz.toString());
-		        outLogger.newLine();		        
-		        outLogger.write("----------------------------------------------------------");
-
-		        outLogger.close();
-	        } catch (IOException e) {}
-			*/
 			ganadores.add(xyz);
 		}
 		
 		try {
-	        BufferedWriter out = new BufferedWriter(new FileWriter("ganadores.txt"));
-	        out.write("----------------------------------------------------------");
-	        out.newLine();
-	        out.write("***** LOS GANADORES *****");
-	        out.newLine();
+	        BufferedWriter outG = new BufferedWriter(new FileWriter("Ganadores_Resultados.txt"));
+	        BufferedWriter outFA = new BufferedWriter(new FileWriter("Ganadores_FuncionesDeAptitud.txt"));
+	        outG.write("************ LOS GANADORES *******************");
+	        outG.newLine();
+	        outFA.write("*********** VALORES DE APTITUD DE GANADORES **************");
+	        outFA.newLine();
 	        
+	        int index = 0;
 	        for (Mundiales individuo : ganadores) {
-	        	out.write( "Aptitud:" + individuo.getNumeroAptitud() );
-	        	out.write( individuo.toString() );        	
-	        	out.write("----------------------------------------------------------");
-	        }
-	        out.write("----------------------------------------------------------");
+	        	
+	        	outFA.write( individuo.getNumeroAptitud().toString()  );
+	        	outFA.newLine();
+	        	
+	        	outG.write( "Ganador"  + index + "----" );
+	        	outG.write( "Aptitud:" + individuo.getNumeroAptitud() );
+	        	outG.write( individuo.toString() );        	
+	        	outG.write("----------------------------------------------------------");
+	        }       
 
-            out.close();
+            outG.close();
+            outFA.close();
+            
         } catch (IOException e) {}
 		
 	}
