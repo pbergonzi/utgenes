@@ -120,7 +120,7 @@ public class Mundiales extends Individuo{
 				ConstantesMundiales.r20++;
 				aptitud += 1;
 			}
-			// 17 - En un mundial, un país no puede ser campeón y subcampeón.
+			// 17 - En un mundial, campeón y subcampeón son países diferentes.
 			if ( unPaisNoEsCampeonYSubcampeonEnUnMundial() ){
 				ConstantesMundiales.r21++;
 				aptitud += 24;
@@ -135,7 +135,7 @@ public class Mundiales extends Individuo{
 				ConstantesMundiales.r25++;
 				aptitud += 11;
 			}
-			// 20- Un equipo subcampeón nunca tuvo a un jugador de su selección como goleador
+			// 20- El goleador del mundial, forma parte de un equipo distinto al subcampeón
 			if ( unSubcampeonNuncaTuvoUnGoleadorEnElMismoMundial() ){
 				ConstantesMundiales.r22++;
 				aptitud += 46;
