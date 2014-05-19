@@ -17,6 +17,8 @@ public class AlgoritmoMundial {
 	public static void main(String[] args) {
 		
 		List<Mundiales> ganadores = new ArrayList<Mundiales>();
+		double mejorAptitud = -1000;
+		Individuo mejor = null;
 		
 		for (int i = 0; i < 50; i++) {
 		
@@ -26,6 +28,12 @@ public class AlgoritmoMundial {
 			
 			Mundiales xyz = (Mundiales) maximoLocal.ejecutar();
 			
+			
+			if ( mejorAptitud < xyz.aptitud() ){
+				mejorAptitud = xyz.aptitud();
+				mejor = xyz;
+			}
+			
 			ganadores.add(xyz);
 		}
 		
@@ -34,6 +42,10 @@ public class AlgoritmoMundial {
 	        BufferedWriter outFA = new BufferedWriter(new FileWriter("Ganadores_FuncionesDeAptitud.txt"));
 	        outG.write("************ LOS GANADORES *******************");
 	        outG.newLine();
+	        outG.write( "Ganador de los ganadores");
+        	outG.write( "Aptitud:" + ((Mundiales) mejor).getNumeroAptitud() );
+        	outG.write( mejor.toString() );
+        	outG.write("----------------------------------------------------------");
 	        outFA.write("*********** VALORES DE APTITUD DE GANADORES **************");
 	        outFA.newLine();
 	        
