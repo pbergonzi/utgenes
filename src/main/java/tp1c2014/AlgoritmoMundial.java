@@ -83,7 +83,7 @@ public class AlgoritmoMundial {
 		configs.put("2", new ConfiguracionMundial( new Ruleta(), new Simple() ) );
 		configs.put("3", new ConfiguracionMundial( new Torneo(), new BinomialAzarComplemento() ) );
 		
-		if ( args.length > 0 && StringUtils.isNotEmpty(args[0]) && configs.keySet().contains(args[0]) ){
+		if ( args.length > 0 && !args[0].isEmpty() && configs.keySet().contains(args[0]) ){
 			return configs.get(args[0]);
 		}
 		throw new Exception("Parametro invalido");
